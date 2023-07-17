@@ -1,0 +1,13 @@
+AudioFiles/
+Binaries/
+DspNetworks/Binaries
+DspNetworks/CodeLibrary
+DspNetworks/Tests
+DspNetworks/ThirdParty
+Documentation/
+Expansions/
+Images/
+MidiFiles/
+PooledResources/
+Presets/
+Samples/
