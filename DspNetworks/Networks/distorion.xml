@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Network ID="distorion" Version="0.0.0" AllowCompilation="1">
+  <Node FactoryPath="container.chain" ID="distorion" Bypassed="0" ShowParameters="1">
+    <Nodes>
+      <Node ID="xfader" FactoryPath="control.xfader" Bypassed="0">
+        <Properties>
+          <Property ID="NumParameters" Value="2"/>
+          <Property ID="Mode" Value="Linear"/>
+        </Properties>
+        <SwitchTargets>
+          <SwitchTarget>
+            <Connections>
+              <Connection NodeId="gain" ParameterId="Gain"/>
+            </Connections>
+          </SwitchTarget>
+          <SwitchTarget>
+            <Connections>
+              <Connection NodeId="faust" ParameterId="Drive"/>
+            </Connections>
+          </SwitchTarget>
+        </SwitchTargets>
+        <Parameters>
+          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+        </Parameters>
+      </Node>
+      <Node ID="faust" FactoryPath="core.faust" Bypassed="0">
+        <Properties>
+          <Property ID="ClassId" Value="distortion"/>
+          <Property ID="NumParameters" Value="0"/>
+        </Properties>
+        <Parameters>
+          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Bypass" Value="0.0"/>
+          <Parameter MinValue="0.15" MaxValue="0.4999999888241291" StepSize="0.009999999776482582"
+                     ID="Drive" Automated="1"/>
+          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="0.009999999776482582"
+                     ID="Offset" Value="0.09999999776482582"/>
+        </Parameters>
+        <SwitchTargets/>
+      </Node>
+      <Node ID="gain" FactoryPath="core.gain" Bypassed="0">
+        <Parameters>
+          <Parameter MinValue="-15.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                     SkewFactor="1" ID="Gain" Automated="1"/>
+          <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                     SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+          <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                     SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+        </Parameters>
+      </Node>
+    </Nodes>
+    <Parameters>
+      <Parameter ID="Distortion" MinValue="0.0" MaxValue="1.0" Value="0.0">
+        <Connections>
+          <Connection NodeId="xfader" ParameterId="Value"/>
+        </Connections>
+      </Parameter>
+    </Parameters>
+  </Node>
+</Network>

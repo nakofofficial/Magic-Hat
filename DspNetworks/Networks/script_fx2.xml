@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Network ID="script_fx2" Version="0.0.0" AllowCompilation="1">
+  <Node FactoryPath="container.chain" ID="script_fx2" Bypassed="0" ShowParameters="1">
+    <Nodes>
+      <Node ID="faust" FactoryPath="core.faust" Bypassed="0">
+        <Properties>
+          <Property ID="ClassId" Value="pitchShift"/>
+          <Property ID="NumParameters" Value="0"/>
+        </Properties>
+        <Parameters>
+          <Parameter MinValue="-2.0" MaxValue="2.0" StepSize="0.1000000014901161"
+                     ID="shift (semitones)" Automated="1"/>
+          <Parameter MinValue="50.0" MaxValue="10000.0" StepSize="1.0" ID="window (samples)"
+                     Value="1000.0"/>
+          <Parameter MinValue="1.0" MaxValue="10000.0" StepSize="1.0" ID="xfade (samples)"
+                     Value="10.0"/>
+        </Parameters>
+        <SwitchTargets/>
+      </Node>
+    </Nodes>
+    <Parameters>
+      <Parameter ID="Shift" MinValue="-2.0" MaxValue="2.0" StepSize="0.1000000014901161"
+                 Value="2.980232238769531e-8">
+        <Connections>
+          <Connection NodeId="faust" ParameterId="shift (semitones)"/>
+        </Connections>
+      </Parameter>
+    </Parameters>
+  </Node>
+</Network>
