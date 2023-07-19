@@ -52,23 +52,23 @@
                   <Parameter MinValue="0.001000000047497451" MaxValue="1.450000047683716"
                              StepSize="0.00009999999747378752" ID="delayTime" Value="0.2000000029802322"/>
                   <Parameter MinValue="0.0" MaxValue="0.9900000095367432" StepSize="0.001000000047497451"
-                             ID="damping" Value="0.0"/>
+                             ID="damping" Value="0.4140000196639447"/>
                   <Parameter MinValue="0.5" MaxValue="3.0" StepSize="0.00009999999747378752"
-                             ID="size" Value="2.457699950544338"/>
+                             ID="size" Value="1.630199971448741"/>
                   <Parameter MinValue="0.0" MaxValue="0.9900000095367432" StepSize="0.00009999999747378752"
-                             ID="diffusion" Value="0.5"/>
+                             ID="diffusion" Value="0.4643999882682668"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" StepSize="0.009999999776482582"
-                             ID="feedback" Value="0.7099999841302633"/>
+                             ID="feedback" Value="0.6999999843537807"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" StepSize="0.001000000047497451"
-                             ID="modDepth" Value="0.1000000014901161"/>
+                             ID="modDepth" Value="0.0"/>
                   <Parameter MinValue="0.0" MaxValue="10.0" StepSize="0.009999999776482582"
-                             ID="modFreq" Value="2.0"/>
+                             ID="modFreq" Value="0.0"/>
                 </Parameters>
                 <SwitchTargets/>
               </Node>
               <Node ID="gain1" FactoryPath="core.gain" Bypassed="0">
                 <Parameters>
-                  <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                  <Parameter MinValue="-100.0" MaxValue="-10.0" StepSize="0.1000000014901161"
                              SkewFactor="5.422270774841309" ID="Gain" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
                              SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
@@ -84,7 +84,7 @@
       </Node>
     </Nodes>
     <Parameters>
-      <Parameter ID="Parameter" MinValue="0.0" MaxValue="1.0" Value="1.0">
+      <Parameter ID="Parameter" MinValue="0.0" MaxValue="1.0" Value="0.384916015625">
         <Connections>
           <Connection NodeId="xfader" ParameterId="Value"/>
         </Connections>

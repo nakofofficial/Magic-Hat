@@ -24,7 +24,14 @@ using xfader_c0 = parameter::from0To1<core::gain,
                                       0, 
                                       xfader_c0Range>;
 
-using xfader_c1 = xfader_c0;
+DECLARE_PARAMETER_RANGE_SKEW(xfader_c1Range, 
+                             -100., 
+                             -10., 
+                             5.42227);
+
+using xfader_c1 = parameter::from0To1<core::gain, 
+                                      0, 
+                                      xfader_c1Range>;
 
 using xfader_multimod = parameter::list<xfader_c0, xfader_c1>;
 
@@ -70,7 +77,7 @@ template <int NV> struct instance: public script_fx1_impl::script_fx1_t_<NV>
 		SNEX_METADATA_ENCODED_PARAMETERS(18)
 		{
 			0x005B, 0x0000, 0x5000, 0x7261, 0x6D61, 0x7465, 0x7265, 0x0000, 
-            0x0000, 0x0000, 0x8000, 0x003F, 0x8000, 0x003F, 0x8000, 0x003F, 
+            0x0000, 0x0000, 0x8000, 0xB63F, 0xC513, 0x003E, 0x8000, 0x003F, 
             0x0000, 0x0000
 		};
 	};
@@ -106,18 +113,18 @@ template <int NV> struct instance: public script_fx1_impl::script_fx1_t_<NV>
 		gain.setParameterT(2, 0.);  // core::gain::ResetValue
 		
 		faust.setParameterT(0, 0.2);    // core::faust::delayTime
-		faust.setParameterT(1, 0.);     // core::faust::damping
-		faust.setParameterT(2, 2.4577); // core::faust::size
-		faust.setParameterT(3, 0.5);    // core::faust::diffusion
-		faust.setParameterT(4, 0.71);   // core::faust::feedback
-		faust.setParameterT(5, 0.1);    // core::faust::modDepth
-		faust.setParameterT(6, 2.);     // core::faust::modFreq
+		faust.setParameterT(1, 0.414);  // core::faust::damping
+		faust.setParameterT(2, 1.6302); // core::faust::size
+		faust.setParameterT(3, 0.4644); // core::faust::diffusion
+		faust.setParameterT(4, 0.7);    // core::faust::feedback
+		faust.setParameterT(5, 0.);     // core::faust::modDepth
+		faust.setParameterT(6, 0.);     // core::faust::modFreq
 		
 		;                            // gain1::Gain is automated
 		gain1.setParameterT(1, 20.); // core::gain::Smoothing
 		gain1.setParameterT(2, 0.);  // core::gain::ResetValue
 		
-		this->setParameterT(0, 1.);
+		this->setParameterT(0, 0.384916);
 	}
 	
 	static constexpr bool isPolyphonic() { return NV > 1; };

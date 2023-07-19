@@ -38,7 +38,7 @@ template <int NV>
 using xfader_multimod = parameter::list<xfader_c0, xfader_c1<NV>>;
 
 template <int NV>
-using xfader_t = control::xfader<xfader_multimod<NV>, faders::linear>;
+using xfader_t = control::xfader<xfader_multimod<NV>, faders::rms>;
 
 namespace distorion_t_parameters
 {
@@ -68,7 +68,7 @@ template <int NV> struct instance: public distorion_impl::distorion_t_<NV>
 		SNEX_METADATA_ENCODED_PARAMETERS(20)
 		{
 			0x005B, 0x0000, 0x4400, 0x7369, 0x6F74, 0x7472, 0x6F69, 0x006E, 
-            0x0000, 0x0000, 0x0000, 0x3F80, 0x0000, 0x0000, 0x0000, 0x3F80, 
+            0x0000, 0x0000, 0x0000, 0x3F80, 0xE1E1, 0x3F5B, 0x0000, 0x3F80, 
             0x0000, 0x0000, 0x0000, 0x0000
 		};
 	};
@@ -103,7 +103,7 @@ template <int NV> struct instance: public distorion_impl::distorion_t_<NV>
 		gain.setParameterT(1, 20.); // core::gain::Smoothing
 		gain.setParameterT(2, 0.);  // core::gain::ResetValue
 		
-		this->setParameterT(0, 0.);
+		this->setParameterT(0, 0.858915);
 	}
 	
 	static constexpr bool isPolyphonic() { return NV > 1; };
