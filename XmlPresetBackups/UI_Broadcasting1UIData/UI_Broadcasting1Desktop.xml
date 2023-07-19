@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptPanel" id="Panel1" x="0.0" y="0.0" width="500.0"
+             height="400.0" bgColour="4278190080" itemColour="4279374354"
+             itemColour2="4279374354" textColour="0" borderSize="0.0" borderRadius="0.0"/>
+  <Component type="ScriptSlider" id="Knob1" x="200.0" y="40.0" width="90.0"
+             height="90.0" showValuePopup="Above" text="Main Control" mode="NormalizedPercentage"
+             suffix="%" middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob2" x="80.0" y="170.0" width="50.0"
+             height="50.0" showValuePopup="Above" text="Distortion" mode="NormalizedPercentage"
+             suffix="%" middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob3" x="170.0" y="170.0" width="50.0"
+             height="50.0" showValuePopup="Above" text="Reverb" mode="NormalizedPercentage"
+             suffix="%" middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob4" x="260.0" y="170.0" width="50.0"
+             height="50.0" showValuePopup="Above" text="Delay" mode="NormalizedPercentage"
+             suffix="%" middlePosition="0.5"/>
+  <Component type="ScriptSlider" id="Knob5" x="350.0" y="170.0" width="50.0"
+             height="50.0" showValuePopup="Above" text="Pitch" min="-2.0"
+             max="2.0" middlePosition="0.0"/>
+  <Component type="ScriptLabel" id="Label1" x="70.0" y="230.0" width="74.0"
+             text="Distortion" editable="0"/>
+  <Component type="ScriptLabel" id="Label2" x="160.0" y="230.0" width="74.0"
+             text="Reverb" editable="0"/>
+  <Component type="ScriptLabel" id="Label3" x="250.0" y="230.0" width="74.0"
+             text="Delay" editable="0"/>
+  <Component type="ScriptLabel" id="Label4" x="340.0" y="230.0" width="74.0"
+             text="Pitch Shifting"/>
+  <Component type="ScriptLabel" id="Label5" x="10.0" y="10.0" text="MAGIC HAT v0.0.1"
+             width="180.0" height="35.0" textColour="4285186383" fontSize="23.0"
+             fontStyle="Bold" multiline="1" editable="0"/>
+  <Component type="ScriptLabel" id="Label6" x="400.0" y="350.0" fontName="Nasalization"
+             text="NAKOF" width="90.0" height="20.0"/>
+  <Component type="ScriptLabel" id="Label7" x="10.0" y="40.0" text="Henry Benoit"
+             alignment="left"/>
+  <Component type="ScriptButton" id="Button1" x="360.0" y="20.0" text="Bypass"/>
+  <Component type="ScriptLabel" id="Label8" x="180.0" y="300.0" text="Algorithm"
+             width="140.0" height="20.0" itemColour="4282232913"/>
+  <Component type="ScriptButton" id="Button2" x="130.0" y="300.0" width="50.0"
+             height="22.0" text="&lt;-"/>
+  <Component type="ScriptButton" id="Button3" x="320.0" y="300.0" width="50.0"
+             height="22.0" text="-&gt;"/>
+</ContentProperties>
