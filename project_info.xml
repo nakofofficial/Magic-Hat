@@ -4,27 +4,27 @@
   <Name value="Magic Hat"/>
   <Version value="1.0.0"/>
   <Description value=""/>
-  <BundleIdentifier value="com.myCompany.product"/>
-  <PluginCode value="Abcd"/>
+  <BundleIdentifier value="com.HenryBenoit.MagicHat"/>
+  <PluginCode value="Mght"/>
   <EmbedAudioFiles value="Yes"/>
   <EmbedImageFiles value="Yes"/>
   <SupportFullDynamicsHLAC value="No"/>
   <AdditionalDspLibraries value=""/>
   <OSXStaticLibs value=""/>
   <WindowsStaticLibFolder value=""/>
-  <ExtraDefinitionsWindows value=""/>
-  <ExtraDefinitionsOSX value=""/>
-  <ExtraDefinitionsIOS value=""/>
-  <ExtraDefinitionsLinux value=""/>
+  <ExtraDefinitionsWindows value="HISE_SAMPLE_DIALOG_SHOW_INSTALL_BUTTON=0&#10;&#10;HISE_SAMPLE_DIALOG_SHOW_LOCATE_BUTTON=1"/>
+  <ExtraDefinitionsOSX value="HISE_SAMPLE_DIALOG_SHOW_INSTALL_BUTTON=0&#10;&#10;HISE_SAMPLE_DIALOG_SHOW_LOCATE_BUTTON=1"/>
+  <ExtraDefinitionsIOS value="HISE_SAMPLE_DIALOG_SHOW_INSTALL_BUTTON=0&#10;&#10;HISE_SAMPLE_DIALOG_SHOW_LOCATE_BUTTON=1"/>
+  <ExtraDefinitionsLinux value="HISE_SAMPLE_DIALOG_SHOW_INSTALL_BUTTON=0&#10;&#10;HISE_SAMPLE_DIALOG_SHOW_LOCATE_BUTTON=1"/>
   <AppGroupID value=""/>
   <RedirectSampleFolder value=""/>
   <AAXCategoryFX value="AAX_ePlugInCategory_Modulation"/>
-  <VST3Category value=""/>
-  <SupportMonoFX value="No"/>
+  <VST3Category value="Tools"/>
+  <SupportMonoFX value="1"/>
   <EnableMidiInputFX value="No"/>
   <EnableMidiOut value="No"/>
   <EnableSoundGeneratorsFX value="No"/>
-  <VST3Support value="No"/>
+  <VST3Support value="1"/>
   <UseRawFrontend value="No"/>
   <ExpansionType value="Disabled"/>
   <EncryptionKey value=""/>
