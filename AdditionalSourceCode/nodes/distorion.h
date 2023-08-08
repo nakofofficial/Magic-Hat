@@ -25,7 +25,7 @@ using xfader_c0 = parameter::from0To1<core::gain,
                                       xfader_c0Range>;
 
 DECLARE_PARAMETER_RANGE_STEP(xfader_c1Range, 
-                             0.15, 
+                             0., 
                              0.5, 
                              0.01);
 
@@ -68,7 +68,7 @@ template <int NV> struct instance: public distorion_impl::distorion_t_<NV>
 		SNEX_METADATA_ENCODED_PARAMETERS(20)
 		{
 			0x005B, 0x0000, 0x4400, 0x7369, 0x6F74, 0x7472, 0x6F69, 0x006E, 
-            0x0000, 0x0000, 0x0000, 0x3F80, 0xE1E1, 0x3F5B, 0x0000, 0x3F80, 
+            0x0000, 0x0000, 0x0000, 0x3F80, 0x0000, 0x0000, 0x0000, 0x3F80, 
             0x0000, 0x0000, 0x0000, 0x0000
 		};
 	};
@@ -95,15 +95,15 @@ template <int NV> struct instance: public distorion_impl::distorion_t_<NV>
 		
 		; // xfader::Value is automated
 		
-		faust.setParameterT(0, 0.);  // core::faust::Bypass
-		;                            // faust::Drive is automated
-		faust.setParameterT(2, 0.1); // core::faust::Offset
+		faust.setParameterT(0, 0.);   // core::faust::Bypass
+		;                             // faust::Drive is automated
+		faust.setParameterT(2, 0.19); // core::faust::Offset
 		
 		;                           // gain::Gain is automated
 		gain.setParameterT(1, 20.); // core::gain::Smoothing
 		gain.setParameterT(2, 0.);  // core::gain::ResetValue
 		
-		this->setParameterT(0, 0.858915);
+		this->setParameterT(0, 0.);
 	}
 	
 	static constexpr bool isPolyphonic() { return NV > 1; };

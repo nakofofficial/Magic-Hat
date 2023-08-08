@@ -15,7 +15,9 @@
 
 // Include compiled network files ------------------
 
+#include "AutoPanner.h"
 #include "distorion.h"
+#include "flanger.h"
 #include "script_fx1.h"
 #include "script_fx2.h"
 

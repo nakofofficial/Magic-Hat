@@ -24,7 +24,9 @@ struct Factory: public scriptnode::dll::StaticLibraryHostFactory
 		registerPolyNode<project::reverb<1>, project::reverb<NUM_POLYPHONIC_VOICES>>();
 		registerPolyNode<project::pitchShift<1>, project::pitchShift<NUM_POLYPHONIC_VOICES>>();
 		registerPolyNode<project::distortion<1>, project::distortion<NUM_POLYPHONIC_VOICES>>();
+		registerPolyNode<project::AutoPanner<1>, wrap::illegal_poly<project::AutoPanner<1>>>();
 		registerPolyNode<project::distorion<1>, wrap::illegal_poly<project::distorion<1>>>();
+		registerPolyNode<project::flanger<1>, wrap::illegal_poly<project::flanger<1>>>();
 		registerPolyNode<project::script_fx1<1>, wrap::illegal_poly<project::script_fx1<1>>>();
 		registerPolyNode<project::script_fx2<1>, wrap::illegal_poly<project::script_fx2<1>>>();
 	}
